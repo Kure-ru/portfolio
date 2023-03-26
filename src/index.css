@@ -1,0 +1,102 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root{
+  --font:'Space Grotesk', sans-serif;
+  --black: #161616;
+  --magenta: #e107e1;
+  --white: #fff;
+}
+
+/* BASE STYLE  */
+*{
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 16px;
+}
+
+#root{
+  background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, hsl(351,4%,12%),hsl(351,4%,12%));
+}
+
+/* TYPOGRAPHY */
+
+h1,
+.header__name{
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+h2,
+svg{
+  font-size: 2rem;
+}
+
+p, a {
+  font-size: 1.2rem;
+  padding: 8px 0;
+}
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+ padding-bottom: .8rem;
+ border-bottom: 2px solid var(--magenta);
+}
+
+a:hover{
+  color: var(--magenta);
+}
+/* LAYOUT  */
+
+#root{
+  padding: 50px 10%;
+}
+
+.hero{
+  display: flex;
+  margin-bottom: 5rem;
+}
+/* HEADER */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+svg{
+  padding: 0 8px;
+}
+
+svg:hover{
+  fill: var(--magenta);
+}
+
+ .header__name{
+  text-decoration: underline;
+  text-decoration-color: #e107e1;
+} 
+
+header img{
+  padding: 0 2rem;
+}
+
+header p {
+  text-align: justify;
+  padding-right: 5rem;
+}
+
+/* SKILLS */
+
+.skills{
+  padding-top: 5rem;
+}
+
+.skills{
+  border-top: 1px solid var(--white);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
