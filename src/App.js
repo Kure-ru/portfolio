@@ -27,7 +27,7 @@ function App() {
               établie pour mettre en pratique mes compétences et contribuer à
               des projets innovants.
             </p>
-            <a href="#" className="contact">
+            <a href="#" className="header__contact">
               Contactez-moi
             </a>
           </div>
@@ -95,42 +95,6 @@ function App() {
                 </li>
               </ul>
             </div>
-
-            <div className="projects__project">
-              <img src="/projet_2.png" alt="projet de calculatrice" />
-              <h4>Calculatrice Y2K</h4>
-              <span>HTML CSS JS</span>
-              <ul>
-                <li>
-                  <a href="https://kure-ru.github.io/Calculator/">
-                    voir le site
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/Calculator">
-                    voir le code
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="projects__project">
-              <img src="/projet_2.png" alt="projet de calculatrice" />
-              <h4>Calculatrice Y2K</h4>
-              <span>HTML CSS JS</span>
-              <ul>
-                <li>
-                  <a href="https://kure-ru.github.io/Calculator/">
-                    voir le site
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/Calculator">
-                    voir le code
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </section>
         <section className="contact">
@@ -144,19 +108,18 @@ function App() {
           </div>
           <form name="contact" method="POST" data-netlify="true">
             <p>
-              <label>
-                Nom <input type="text" name="name" required />
-              </label>
+              <input type="text" name="name" placeholder="NOM" required />
             </p>
             <p>
-              <label>
-                Email <input type="email" name="email" required />
-              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="ADRESSE EMAIL"
+                required
+              />
             </p>
-            <p>
-              <label>
-                Message: <textarea name="message"></textarea>
-              </label>
+            <p><label>MESSAGE</label>
+              <textarea name="message"></textarea>
             </p>
             <p>
               <button type="submit">Envoyer</button>
@@ -164,6 +127,14 @@ function App() {
           </form>
         </section>
       </main>
+      <footer>
+        <h3>Claire Inada</h3>
+        <div className="header__div">
+          <IoLogoGithub />
+          <IoLogoLinkedin />
+          <IoLogoTwitter />
+        </div>
+      </footer>
     </>
   );
 }

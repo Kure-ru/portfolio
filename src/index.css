@@ -1,22 +1,92 @@
 @import-normalize;
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
 
-:root{
-  --font:'Space Grotesk', sans-serif;
+:root {
+  --font: "Space Grotesk", sans-serif;
   --black: #161616;
   --magenta: #e107e1;
+  --dark-grey: #3c3c3c;
+  --light-grey: #bfbfbf;
   --white: #fff;
 }
 
 /* BASE STYLE  */
-*{
+* {
   font-family: var(--font);
   color: var(--white);
   font-size: 16px;
 }
 
-#root{
-  background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, hsl(351,4%,12%),hsl(351,4%,12%));
+body {
+  background-image: radial-gradient(
+      circle at center center,
+      transparent 0%,
+      rgb(0, 0, 0) 85%
+    ),
+    linear-gradient(
+      78deg,
+      rgba(192, 192, 192, 0.05) 0%,
+      rgba(192, 192, 192, 0.05) 50%,
+      rgba(60, 60, 60, 0.05) 50%,
+      rgba(60, 60, 60, 0.05) 100%
+    ),
+    linear-gradient(
+      227deg,
+      rgba(97, 97, 97, 0.05) 0%,
+      rgba(97, 97, 97, 0.05) 50%,
+      rgba(52, 52, 52, 0.05) 50%,
+      rgba(52, 52, 52, 0.05) 100%
+    ),
+    linear-gradient(
+      240deg,
+      rgba(98, 98, 98, 0.05) 0%,
+      rgba(98, 98, 98, 0.05) 50%,
+      rgba(249, 249, 249, 0.05) 50%,
+      rgba(249, 249, 249, 0.05) 100%
+    ),
+    linear-gradient(
+      187deg,
+      rgba(1, 1, 1, 0.05) 0%,
+      rgba(1, 1, 1, 0.05) 50%,
+      rgba(202, 202, 202, 0.05) 50%,
+      rgba(202, 202, 202, 0.05) 100%
+    ),
+    linear-gradient(
+      101deg,
+      rgba(61, 61, 61, 0.05) 0%,
+      rgba(61, 61, 61, 0.05) 50%,
+      rgba(254, 254, 254, 0.05) 50%,
+      rgba(254, 254, 254, 0.05) 100%
+    ),
+    linear-gradient(
+      176deg,
+      rgba(237, 237, 237, 0.05) 0%,
+      rgba(237, 237, 237, 0.05) 50%,
+      rgba(147, 147, 147, 0.05) 50%,
+      rgba(147, 147, 147, 0.05) 100%
+    ),
+    linear-gradient(
+      304deg,
+      rgba(183, 183, 183, 0.05) 0%,
+      rgba(183, 183, 183, 0.05) 50%,
+      rgba(57, 57, 57, 0.05) 50%,
+      rgba(57, 57, 57, 0.05) 100%
+    ),
+    radial-gradient(
+      circle at center center,
+      hsl(351, 4%, 12%),
+      hsl(351, 4%, 12%)
+    );
+}
+
+nav{
+  padding: 50px 100px 0 100px;
+}
+
+header, 
+section,
+footer {
+  padding: 50px 100px;
 }
 
 ul {
@@ -32,27 +102,28 @@ li {
 /* TYPOGRAPHY */
 
 h1,
-.header__name{
+.header__name {
   font-size: 4.5rem;
   font-weight: 700;
 }
 
-h2,
-svg{
+h2 {
   font-size: 3.5rem;
 }
 
-h3 {
+h3,
+svg {
   font-size: 2.5rem;
 }
 
-h4{
+h4 {
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1rem 0;
   margin: 0;
 }
-p, a {
+p,
+a {
   font-size: 1.2rem;
   padding: 8px 0;
 }
@@ -63,63 +134,59 @@ p {
 a {
   text-transform: uppercase;
   text-decoration: none;
- padding-bottom: .8rem;
+  padding-bottom: 0.8rem;
 }
 
-a:hover{
+a:hover {
   color: var(--magenta);
 }
 /* LAYOUT  */
 
-#root{
-  padding: 50px 10%;
-}
-
-.hero{
+.hero {
   margin-bottom: 5rem;
 }
 
-.hero, .projects__container, .contact {
+.hero,
+.projects__container,
+.contact {
   display: flex;
 }
 
 .skills,
 .projects {
   border-top: 1px solid var(--white);
-  padding: 5rem 0;
 }
 
-.skills{
+.skills {
   display: grid;
 }
 
-.projects__container{
+.projects__container {
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-
 /* HEADER */
-nav{
+nav, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-svg{
+svg {
   padding: 0 8px;
 }
 
-svg:hover{
+svg:hover {
   fill: var(--magenta);
 }
 
- .header__name{
+.header__name {
   text-decoration: underline;
   text-decoration-color: #e107e1;
-} 
+}
 
-header img{
+header img {
   padding: 0 2rem;
 }
 
@@ -128,33 +195,33 @@ header p {
   padding-right: 5rem;
 }
 
-.contact {
+.header__contact {
   border-bottom: 2px solid var(--magenta);
 }
 /* SKILLS */
 
-.skills{
+.skills {
   grid-template-columns: repeat(3, auto);
 }
 
 /* PROJECTS */
 
-.projects__container{
+.projects__container {
   justify-content: space-around;
 }
 
-.projects__project{
+.projects__project {
   max-width: 40%;
   padding: 2rem;
 }
 
-.projects__project img{
+.projects__project img {
   max-width: 100%;
   min-height: 240px;
 }
 
 .projects__project span {
-  color: grey;
+  color: var(--light-grey);
 }
 
 .projects a {
@@ -162,7 +229,41 @@ header p {
 }
 
 /* CONTACT */
+.contact {
+  justify-content: space-between;
+  gap: 10rem;
+  background: var(--dark-grey);
+}
 
-.contact__text {
-  max-width: 50%;
+input,
+textarea {
+  width: 400px;
+  background: none;
+  padding: 2rem 0;
+  border: none;
+  border-bottom: 2px solid var(--white);
+}
+
+input,
+label {
+  text-transform: uppercase;
+  color: var(--light-grey);
+}
+
+form button {
+  text-align: right;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--magenta);
+  padding-bottom: 0.5rem;
+}
+
+form button:hover {
+  color: var(--magenta);
+}
+
+form button:active {
+  background: var(--magenta);
+  color: var(--white);
 }
