@@ -6,32 +6,36 @@ function App() {
   return (
     <>
       <nav>
-        <h3>Claire Inada</h3>
+        <h3 className="top__name">Claire Inada</h3>
         <div className="header__div">
-          <IoLogoGithub />
-          <IoLogoLinkedin />
-          <IoLogoTwitter />
+          <a href="https://github.com/Kure-ru">
+            <IoLogoGithub />{" "}
+          </a>
+          <a href="https://www.linkedin.com/in/claire-inada-873006124/">
+            <IoLogoLinkedin />
+          </a>
+          <a href="https://twitter.com/home">
+            <IoLogoTwitter />
+          </a>
         </div>
       </nav>
       <header>
         <section className="hero">
           <div>
+            <div className="lines"></div>
             <h1>
               Enchantée, je m'appelle <br />
               <span className="header__name">Claire Inada</span>
             </h1>
             <p>
               Développeuse full-stack créative et minutieuse, je suis passionnée
-              par les possibilités offertes par l'Intelligence Artificielle. Je
-              suis actuellement à la recherche d'une entreprise informatique
-              établie pour mettre en pratique mes compétences et contribuer à
-              des projets innovants.
+              par les possibilités offertes par l'Intelligence Artificielle.
             </p>
-            <a href="#" className="header__contact">
+            <a href="./#contact" className="header__contact">
               Contactez-moi
             </a>
           </div>
-          <img src="http://placekitten.com/450/600" alt="profil" />
+          <img src="/profile_pic.png" alt="profil" />
         </section>
       </header>
       <main>
@@ -62,10 +66,10 @@ function App() {
           </div>
         </section>
         <section className="projects">
-          <h2>Projets récents</h2>
+          <h2>Projets</h2>
           <div className="projects__container">
             <div className="projects__project">
-              <img src="/projet_1.png" alt="projet de todo list " />
+              <img src="/projet_1.jpg" alt="projet de todo list " />
               <h4>Application Todo</h4>
               <span>REACT CSS</span>
               <ul>
@@ -79,7 +83,7 @@ function App() {
             </div>
 
             <div className="projects__project">
-              <img src="/projet_2.png" alt="projet de calculatrice" />
+              <img src="/projet_2.jpg" alt="projet de calculatrice" />
               <h4>Calculatrice Y2K</h4>
               <span>HTML CSS JS</span>
               <ul>
@@ -95,44 +99,108 @@ function App() {
                 </li>
               </ul>
             </div>
+
+            <div className="projects__project">
+              <img src="/projet_3.jpg" alt="projet de morpion" />
+              <h4>Morpion</h4>
+              <span>HTML CSS JS</span>
+              <ul>
+                <li>
+                  <a href="https://kure-ru.github.io/tic-tac-toe/">
+                    voir le site
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Kure-ru/tic-tac-toe">
+                    voir le code
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="projects__project">
+              <img src="/projet_4.jpg" alt="site de recettes de cocktails" />
+              <h4>The Cocktail Collective</h4>
+              <span>HTML CSS JS API</span>
+              <ul>
+                <li>
+                  <a href="https://kure-ru.github.io/The_Cocktail_Collective/">
+                    voir le site
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Kure-ru/The_Cocktail_Collective">
+                    voir le code
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="projects__project">
+              <img src="/projet_5.jpg" alt="site de tirages de tarot" />
+              <h4>Enlightened Tarot</h4>
+              <span>HTML CSS JS API</span>
+              <ul>
+                <li>
+                  <a href="https://kure-ru.github.io/Enlightened_Tarot/">
+                    voir le site
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Kure-ru/Enlightened_Tarot">
+                    voir le code
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </section>
         <section className="contact">
           <div className="contact__text">
             <h2>Contactez-moi</h2>
             <p>
-              J'aimerais en savoir plus sur votre projet et sur la meilleure
-              façon de vous aider. Remplissez ce formulaire ou contactez moi à
-              inada.kureru@gmail.com
+              Je serais ravie de discuter avec vous de votre projet et de voir
+              comment je peux vous aider à le concrétiser. Pour en savoir plus,
+              remplissez simplement ce formulaire ou envoyez-moi un e-mail à
+              inada.kureru@gmail.com !
             </p>
           </div>
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <input type="text" name="name" placeholder="NOM" required />
-            </p>
-            <p>
-              <input
-                type="email"
-                name="email"
-                placeholder="ADRESSE EMAIL"
-                required
-              />
-            </p>
-            <p><label>MESSAGE</label>
-              <textarea name="message"></textarea>
-            </p>
-            <p>
-              <button type="submit">Envoyer</button>
-            </p>
+          <form id="contact " name="contact" method="POST" data-netlify="true">
+            <ul>
+              <li>
+                <input type="text" name="name" placeholder="NOM" required />
+              </li>
+              <li>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="ADRESSE EMAIL"
+                  required
+                />
+              </li>
+              <li>
+                <label>MESSAGE</label><br/>
+                <textarea name="message"></textarea>
+              </li>
+              <li>
+                <button type="submit">Envoyer</button>
+              </li>
+            </ul>
           </form>
         </section>
       </main>
       <footer>
         <h3>Claire Inada</h3>
         <div className="header__div">
-          <IoLogoGithub />
-          <IoLogoLinkedin />
-          <IoLogoTwitter />
+          <a href="https://github.com/Kure-ru">
+            <IoLogoGithub />{" "}
+          </a>
+          <a href="https://www.linkedin.com/in/claire-inada-873006124/">
+            <IoLogoLinkedin />
+          </a>
+          <a href="https://twitter.com/home">
+            <IoLogoTwitter />
+          </a>
         </div>
       </footer>
     </>
