@@ -83,19 +83,19 @@ nav {
   padding: 50px 2% 0 2%;
 }
 
+button {
+  background: none;
+  padding: 1rem;
+  border: none;
+  
+}
 
 section,
 footer {
   padding: 50px 2%;
 }
-
-header, .hero{
- padding: 8px 2% 0 2%;
-}
-
 nav ul,
-footer ul,
-.projects ul {
+footer ul {
   display: flex;
   justify-content: space-between;
   padding: 0;
@@ -127,32 +127,30 @@ h4 {
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1rem 0;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 p,
-a {
+a{
   font-size: 1.2rem;
   padding: 8px 0;
   line-height: 1.8;
 }
 
-a {
+a,
+button {
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 0.8rem;
 }
 
-a:hover {
+a:hover,
+button:hover {
   color: var(--magenta);
+  cursor: pointer;
 }
 /* LAYOUT  */
 
-/* .hero {
-  margin-bottom: 5rem;
-} */
-
 .hero,
-.projects__container,
 .contact {
   display: flex;
 }
@@ -164,11 +162,6 @@ a:hover {
 
 .skills {
   display: grid;
-}
-
-.projects__container {
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
 /* HEADER */
@@ -197,9 +190,8 @@ svg:hover {
 }
 header img {
   padding: 0 2rem;
-  max-width: 550px;
-  width: 50%;
-  
+  max-width: 500px;
+  width: 42%;
 }
 
 header p {
@@ -229,30 +221,21 @@ header p {
 
 .skills {
   grid-template-columns: repeat(3, auto);
+  gap: 2rem;
 }
 
 /* PROJECTS */
-
-.projects__container {
-  justify-content: space-around;
+.projects{
+  padding: 50px 15%;
 }
 
-.projects__project {
-  /* max-width: 40%; */
-  padding: 2rem;
+.legend {
+  bottom: 120px !important;
 }
 
-.projects__project img {
-  max-width: 100%;
-  min-height: 240px;
-}
-
-.projects__project span {
-  color: var(--light-grey);
-}
-
-.projects a {
-  border-bottom: 2px solid var(--magenta);
+.legend:hover{
+  background: var(--magenta) !important;
+  color: white !important;
 }
 
 /* CONTACT */
@@ -324,24 +307,17 @@ form button:active {
   }
 
   .skills {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
-  .skills div {
-    padding: 1rem;
-    text-align: center;
-  }
   .contact {
     flex-direction: column;
     justify-content: center;
     gap: 0px;
   }
 
-  .projects__container {
-    flex-direction: column;
-  }
-  .projects__project {
-    padding: 0;
+  .dot{
+    width: 31px !important;
   }
 
   form ul {
@@ -354,39 +330,46 @@ form button:active {
 }
 
 @media screen and (max-width: 820px) {
- .hero{
-  justify-content: center;
-  align-items: center;
- }
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
 
- h1 {
-  text-align: center;
- }
+  h1 {
+    text-align: center;
+  }
 
- header p{
-  padding-right: 0;
-  line-height: 1;
- }
+  header p {
+    padding-right: 0;
+    line-height: 1;
+  }
 
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
 
+  .skills div {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .contact {
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 821px) {
-  .projects__project {
-    flex-basis: 500px;
+
+  input,
+  textarea {
+    width: 400px;
   }
 
- input,
- textarea {
-  width: 400px;
- }
+  form li {
+    padding: 1rem 0;
+  }
 
- form li {
-  padding: 1rem 0;
- }
-
- .skills div{
-  padding: 2rem 0;
- }
+  .skills div {
+    padding: 2rem 0;
+  }
 }
-

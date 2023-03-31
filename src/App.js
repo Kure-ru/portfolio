@@ -1,8 +1,19 @@
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoTwitter } from "react-icons/io5";
+import ReactDOM from "react-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import { Car } from "@swiftcarrot/react-ionicons";
+import {useRef} from 'react';
 
 function App() {
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'})
+  }
+
   return (
     <>
       <nav>
@@ -31,9 +42,9 @@ function App() {
               Développeuse full-stack créative et minutieuse, je suis passionnée
               par les possibilités offertes par l'Intelligence Artificielle.
             </p>
-            <a href="./#contact" className="header__contact">
+            <button onClick={handleClick} className="header__contact">
               Contactez-moi
-            </a>
+            </button>
           </div>
           <img src="/profile_pic.png" alt="profil" />
         </section>
@@ -67,95 +78,40 @@ function App() {
         </section>
         <section className="projects">
           <h2>Projets</h2>
-          <div className="projects__container">
-            <div className="projects__project">
+
+          <Carousel>
+            <div>
               <img src="/projet_1.jpg" alt="projet de todo list " />
+              <p className="legend"><a href="https://github.com/Kure-ru/Todo" >voir le site</a></p>
               <h4>Application Todo</h4>
-              <span>REACT CSS</span>
-              <ul>
-                <li>
-                  <a href="https://todo-kure-ru.vercel.app/">voir le site</a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/Todo">voir le code</a>
-                </li>
-              </ul>
             </div>
 
-            <div className="projects__project">
+            <div>
               <img src="/projet_2.jpg" alt="projet de calculatrice" />
+              <p className="legend"><a href="https://github.com/Kure-ru/Calculator" >voir le site</a></p>
               <h4>Calculatrice Y2K</h4>
-              <span>HTML CSS JS</span>
-              <ul>
-                <li>
-                  <a href="https://kure-ru.github.io/Calculator/">
-                    voir le site
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/Calculator">
-                    voir le code
-                  </a>
-                </li>
-              </ul>
             </div>
 
-            <div className="projects__project">
+            <div>
               <img src="/projet_3.jpg" alt="projet de morpion" />
+              <p className="legend"><a href="https://github.com/Kure-ru/tic-tac-toe" >voir le site</a></p>
               <h4>Morpion</h4>
-              <span>HTML CSS JS</span>
-              <ul>
-                <li>
-                  <a href="https://kure-ru.github.io/tic-tac-toe/">
-                    voir le site
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/tic-tac-toe">
-                    voir le code
-                  </a>
-                </li>
-              </ul>
             </div>
 
-            <div className="projects__project">
+            <div>
               <img src="/projet_4.jpg" alt="site de recettes de cocktails" />
+              <p className="legend"><a href="https://github.com/Kure-ru/The_Cocktail_Collective" >voir le site</a></p>
               <h4>The Cocktail Collective</h4>
-              <span>HTML CSS JS API</span>
-              <ul>
-                <li>
-                  <a href="https://kure-ru.github.io/The_Cocktail_Collective/">
-                    voir le site
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/The_Cocktail_Collective">
-                    voir le code
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="projects__project">
-              <img src="/projet_5.jpg" alt="site de tirages de tarot" />
-              <h4>Enlightened Tarot</h4>
-              <span>HTML CSS JS API</span>
-              <ul>
-                <li>
-                  <a href="https://kure-ru.github.io/Enlightened_Tarot/">
-                    voir le site
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Kure-ru/Enlightened_Tarot">
-                    voir le code
-                  </a>
-                </li>
-              </ul>
             </div>
 
-          </div>
+            <div>
+              <img src="/projet_5.jpg" alt="site de tirages de tarot" />
+              <p className="legend"><a href="https://github.com/Kure-ru/Enlightened_Tarot" >voir le site</a></p>
+              <h4>Enlightened Tarot</h4>
+            </div>
+          </Carousel>
         </section>
-        <section className="contact">
+        <section ref={ref} className="contact">
           <div className="contact__text">
             <h2>Contactez-moi</h2>
             <p>
@@ -179,7 +135,8 @@ function App() {
                 />
               </li>
               <li>
-                <label>MESSAGE</label><br/>
+                <label>MESSAGE</label>
+                <br />
                 <textarea name="message"></textarea>
               </li>
               <li>
