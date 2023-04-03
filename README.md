@@ -2,7 +2,7 @@
 
 Ceci est mon portfolio. Il comprend une courte présentation, la liste des technologies que j'utilise, mes projets récents, et un formulaire pour me contacter. 
 
-**Link to project:** https://claireinada.netlify.app/
+ [**Link to project**](https://claireinada.netlify.app/)
 
 ![screenshot](./screenshot.png)
 

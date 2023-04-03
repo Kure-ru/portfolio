@@ -1,9 +1,6 @@
 import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoTwitter } from "react-icons/io5";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-// import { Car } from "@swiftcarrot/react-ionicons";
 import {useRef} from 'react';
 
 function App() {
