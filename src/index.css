@@ -95,7 +95,8 @@ footer {
   padding: 50px 2%;
 }
 nav ul,
-footer ul {
+footer ul,
+.projects ul {
   display: flex;
   justify-content: space-between;
   padding: 0;
@@ -226,7 +227,7 @@ header p {
 
 /* PROJECTS */
 .projects{
-  padding: 50px 15%;
+  padding: 50px 5%;
 }
 
 .legend {
@@ -236,6 +237,33 @@ header p {
 .legend:hover{
   background: var(--magenta) !important;
   color: white !important;
+}
+
+.projects__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects__project {
+  padding: 2rem;
+  flex-basis: 400px;
+}
+
+.projects__container {
+  justify-content: space-around;
+}
+
+.projects__project img {
+  max-width: 100%;
+  min-height: 240px;
+}
+
+.projects__project span {
+  color: var(--light-grey);
+}
+
+.projects a {
+  border-bottom: 2px solid var(--magenta);
 }
 
 /* CONTACT */
@@ -326,6 +354,13 @@ form button:active {
 
   li {
     padding: 1rem 0;
+  }
+
+  .projects__container {
+    flex-direction: column;
+  }
+  .projects__project {
+    padding: 0;
   }
 }
 
